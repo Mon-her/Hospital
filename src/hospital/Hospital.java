@@ -11,9 +11,7 @@ public class Hospital {
         HospitalV hv=new HospitalV();
         Hospitales hc=new Hospitales(hv);
         hv.setVisible(true);
-        
-
-    }
+  }
 
     public static void main(String[] args) {
            Hospital inicio = new Hospital();

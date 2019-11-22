@@ -102,7 +102,7 @@ public class Escoger1 extends javax.swing.JInternalFrame {
 
     private void btnCitaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCitaMedicaActionPerformed
         Asignacion vent=new Asignacion();
-     Hospital.Escritorios.add(vent);
+     HospitalV.Escritorios.add(vent);
      vent.toFront();
      vent.setVisible(true);
      this.dispose();// TODO add your handling code here:
@@ -110,7 +110,7 @@ public class Escoger1 extends javax.swing.JInternalFrame {
 
     private void btnUrgenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUrgenciaActionPerformed
      UrgenciasV vent=new UrgenciasV();
-     Hospital.Escritorios.add(vent);
+     HospitalV.Escritorios.add(vent);
      vent.toFront();
      vent.setVisible(true);
      this.dispose();
@@ -118,7 +118,7 @@ public class Escoger1 extends javax.swing.JInternalFrame {
 
     private void btnCitaPrioritariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCitaPrioritariaActionPerformed
         AsignacionCP vent=new AsignacionCP();
-     Hospital.Escritorios.add(vent);
+     HospitalV.Escritorios.add(vent);
      vent.toFront();
      vent.setVisible(true);
      this.dispose();
@@ -126,7 +126,7 @@ public class Escoger1 extends javax.swing.JInternalFrame {
 
     private void btnCitaOdontoloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCitaOdontoloActionPerformed
        Asignacion2 vent=new Asignacion2();
-     Hospital.Escritorios.add(vent);
+     HospitalV.Escritorios.add(vent);
      vent.toFront();
      vent.setVisible(true);
      this.dispose();

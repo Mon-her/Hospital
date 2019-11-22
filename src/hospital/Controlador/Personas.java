@@ -1,15 +1,15 @@
 package hospital.Controlador;
 
 import hospital.PersonaL;
-import hospital.Vista.PersonaV;
+import hospital.Vista.PersonaVista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Personas implements ActionListener{
 
-    private PersonaV Vista;
+    private PersonaVista Vista;
 
-    public Personas(final PersonaV Vista) {
+    public Personas(final PersonaVista Vista) {
         this.Vista = Vista;
         //Agrego la acción de escucha para cada botón.
         this.Vista.btnRegistrar.addActionListener(this);

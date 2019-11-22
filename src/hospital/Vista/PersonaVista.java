@@ -325,7 +325,7 @@ com.mysql.jdbc.Connection con=null;
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
      Escoger1 vent=new Escoger1();
-     Hospital.Escritorios.add(vent);
+     HospitalV.Escritorios.add(vent);
      vent.toFront();
      vent.setVisible(true);
      this.dispose();

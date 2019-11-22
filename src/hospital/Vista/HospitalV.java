@@ -9,12 +9,12 @@ package hospital.Vista;
  *
  * @author sala
  */
-public class Hospital extends javax.swing.JFrame {
+public class HospitalV extends javax.swing.JFrame {
 
     /**
      * Creates new form Hospital
      */
-    public Hospital() {
+    public HospitalV() {
         initComponents();
     }
 
@@ -56,6 +56,8 @@ public class Hospital extends javax.swing.JFrame {
         ));
         scrollPaneTabla.setViewportView(tablaMuestra);
 
+        Escritorios.setLayer(scrollPaneTabla, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout EscritoriosLayout = new javax.swing.GroupLayout(Escritorios);
         Escritorios.setLayout(EscritoriosLayout);
         EscritoriosLayout.setHorizontalGroup(
@@ -72,7 +74,8 @@ public class Hospital extends javax.swing.JFrame {
                 .addComponent(scrollPaneTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
         );
-        Escritorios.setLayer(scrollPaneTabla, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Escritorio.setLayer(Escritorios, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
         Escritorio.setLayout(EscritorioLayout);
@@ -87,7 +90,6 @@ public class Hospital extends javax.swing.JFrame {
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Escritorios, javax.swing.GroupLayout.Alignment.TRAILING)
         );
-        Escritorio.setLayer(Escritorios, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Medicos.setText("Medicos");
         Medicos.addActionListener(new java.awt.event.ActionListener() {

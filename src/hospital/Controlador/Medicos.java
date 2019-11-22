@@ -1,15 +1,15 @@
 package hospital.Controlador;
 
 import hospital.MedicoL;
-import hospital.Vista.Medico;
+import hospital.Vista.MedicoV;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Medicos implements ActionListener{
 
-    private Medico Vista;
+    private MedicoV Vista;
 
-    public Medicos(final Medico Vista) {
+    public Medicos(final MedicoV Vista) {
         this.Vista = Vista;
         //Agrego la acción de escucha para cada botón.
         this.Vista.btnRegistrar.addActionListener(this);
