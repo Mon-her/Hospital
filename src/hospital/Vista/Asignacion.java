@@ -120,6 +120,7 @@ public void llenarCita(){
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         btnConfirmarMedico = new javax.swing.JButton();
+        btnFacturar = new javax.swing.JButton();
 
         cbxMedico.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxMedico.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -135,13 +136,10 @@ public void llenarCita(){
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nombre", "Apellido"
             }
         ));
         jScrollPane1.setViewportView(tabla);
@@ -150,6 +148,13 @@ public void llenarCita(){
         btnConfirmarMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConfirmarMedicoActionPerformed(evt);
+            }
+        });
+
+        btnFacturar.setText("Facturar");
+        btnFacturar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFacturarActionPerformed(evt);
             }
         });
 
@@ -168,7 +173,9 @@ public void llenarCita(){
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(166, 166, 166)
-                        .addComponent(btnConfirmarMedico)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnFacturar)
+                            .addComponent(btnConfirmarMedico))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -177,10 +184,12 @@ public void llenarCita(){
                 .addGap(26, 26, 26)
                 .addComponent(cbxMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addComponent(btnConfirmarMedico)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnFacturar)
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,15 +201,28 @@ public void llenarCita(){
 
     private void cbxMedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbxMedicoMouseClicked
         cargarTabla(cbxMedico.getSelectedItem().toString()); 
+        String id=(String) cbxMedico.getSelectedItem();
+        VistaDatosUsuario.id=id;
+        
     }//GEN-LAST:event_cbxMedicoMouseClicked
 
     private void btnConfirmarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarMedicoActionPerformed
     llenarCita();
+    
     }//GEN-LAST:event_btnConfirmarMedicoActionPerformed
+
+    private void btnFacturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacturarActionPerformed
+     VistaDatosUsuario vent=new VistaDatosUsuario();
+     HospitalV.Escritorios.add(vent);
+     vent.toFront();
+     vent.setVisible(true);
+     this.dispose(); // TODO add your handling code here:
+    }//GEN-LAST:event_btnFacturarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnConfirmarMedico;
+    public javax.swing.JButton btnFacturar;
     public javax.swing.JComboBox cbxMedico;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tabla;

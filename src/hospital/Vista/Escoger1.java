@@ -109,7 +109,7 @@ public class Escoger1 extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCitaMedicaActionPerformed
 
     private void btnUrgenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUrgenciaActionPerformed
-     UrgenciasV vent=new UrgenciasV();
+     urgenciasV vent=new urgenciasV();
      HospitalV.Escritorios.add(vent);
      vent.toFront();
      vent.setVisible(true);
